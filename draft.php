@@ -2,7 +2,7 @@ var prov_id = "", ActionHref = '', speed="", region="";
 var filter_empty_sel_check = false;
 var cookieValue = $.cookie("city_select");
 var cookieRegion = $.cookie("region");
-var cookieProvince = $.cookie("prov_id");
+
 
 $(document).ready(function () {
 if(cookieProvince == '27'){

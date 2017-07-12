@@ -9,11 +9,18 @@ use Illuminate\Support\Facades\View;
 
 class RegisterController extends Controller
 {
-    public function del_sta(Request $request)
+    public function delete(Request $request)
     {
 
         if ($request->isMethod('post')) {
             Customer::destroy($request->input('customerid'));
+            return $request->input('customerid');
+        }
+    }
+    public function edit(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            Customer::where('id',$request->input('customerid'))->update(array('name' => $request->input('name'),'age' => $request->input('age'),'mobile' => $request->input('mobile'),'email' => $request->input('email')));
             return $request->input('customerid');
         }
     }

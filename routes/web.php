@@ -15,7 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::any('register','RegisterController@insert');
-Route::any('delete','RegisterController@del_sta');
-Route::any('test', function () {
-    return view('test');
-});
+Route::any('delete','RegisterController@delete');
+Route::any('edit','RegisterController@edit');
